@@ -10,13 +10,12 @@ az group create --name MythicalADU_Lab_RG --location CentralUS
 * Create Edge/Gateway in IoT Hub
 * Create Device Update in Azure
 * Create Device Update Instance (Link IoT Hub to ADU)
-* Install and configure Gateway (non IoT Edge)
+* Install and Configure IoT Edge
     - ```curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list```  
     - ```sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/```  
     - ```curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg```
     - ```sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/```  
     - ```sudo apt-get update```  
-    - IoT Edge  
     - ```sudo apt update && sudo apt-get install -y moby-engine && sudo apt-get install -y aziot-edge```  
     - ```sudo iotedge config mp --connection-string 'CONNECTION STRING'```  
     - ```sudo iotedge config apply```   
